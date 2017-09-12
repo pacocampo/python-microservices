@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: "grc.io/centraalacademy/demo_python:1.0.0"
+          image: "pacocampo/centraalacademy:latest"
           ports:
             - name: http
               containerPort: 80
