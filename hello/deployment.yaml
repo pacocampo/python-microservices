@@ -7,13 +7,12 @@ spec:
   template:
     metadata:
       labels:
-        name: hello-pods
-  spec:
-    containers:
-    - image: grc.io/centraalacademy/demo_python:1.0.0
-    name: hello-container
-    imagePullPolicy: Always
-    ports:
-    - containerPort: 80
-
-      name: http-server
+        app: hello
+        track: stable
+    spec:
+      containers:
+        - name: hello
+          image: "grc.io/centraalacademy/demo_python:1.0.0"
+          ports:
+            - name: http
+              containerPort: 80
