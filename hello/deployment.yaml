@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: hello
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: hello-pods
+  spec:
+    containers:
+    - image: grc.io/centraalacademy/demo_python:1.0.0
+    name: hello-container
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 80
+
+      name: http-server
