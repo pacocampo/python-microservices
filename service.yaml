@@ -14,4 +14,4 @@ spec:
       protocol: TCP
       name: http-alt
   selector:
-name: nginxplus-pods
+    name: nginxplus-pods
