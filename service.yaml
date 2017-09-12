@@ -1,11 +1,17 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: ngixn-service
-
+  name: nginxplus
 spec:
-
+  type: LoadBalancer
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 9376
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http-alt
+  selector:
+name: nginxplus-pods
