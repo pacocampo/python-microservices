@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bye
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: bye
+        track: stable
+    spec:
+      containers:
+        - name: bye
+          image: "pacocampo/centraalacademy-bye:latest"
+          ports:
+            - name: http
+              containerPort: 80

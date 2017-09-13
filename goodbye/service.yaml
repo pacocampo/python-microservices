@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
+  name: bye
 spec:
 
   ports:
@@ -15,4 +15,4 @@ spec:
 
   selector:
 
-    name: hello-pods
+    name: bye-pods
